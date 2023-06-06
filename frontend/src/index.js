@@ -7,13 +7,25 @@ import {createBrowserRouter,createRoutesFromElements,Route,RouterProvider} from 
 import reportWebVitals from './reportWebVitals';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
+import CartScreen from './screens/CartScreen';
 import store from './store';
+import LoginScreen from './screens/LoginScreen';
 import {Provider} from 'react-redux'
+import RegisterScreen from './screens/RegisterScreen';
+import PrivateRoute from './components/PrivateRoute';
+import ShippingScreen from './screens/shippingScreen';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App/>}>
       <Route index={true} path='/' element={<HomeScreen/>}/>
       <Route  path='/product/:id' element={<ProductScreen/>}/>
+      <Route  path='/cart' element={<CartScreen/>}/>
+      <Route  path='/login' element={<LoginScreen/>}/>
+      <Route  path='/register' element={<RegisterScreen/>}/>
+  
+      <Route path='' element={<PrivateRoute/>}>
+        <Route path='/shipping' element={<ShippingScreen/>}/>
+      </Route>
     </Route>
   )
 )
