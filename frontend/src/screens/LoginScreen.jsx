@@ -7,7 +7,7 @@ import FormContainer from '../components/FormContainer';
 import Loader from '../components/Loader'
 import {useLoginMutation} from '../slices/usersApiSlice';
 import {setCredentials} from '../slices/authSlice';
-import {toast, tost} from 'react-toastify'
+import {toast} from 'react-toastify'
 
 const LoginScreen = () => {
     const dispatch = useDispatch();
