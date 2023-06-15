@@ -6,7 +6,7 @@ import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 
 import { Outlet } from 'react-router-dom'
-
+// keep in mind all those issue you save here in youtube
 // import { Outlet } from 'react-router'
 const App = () => {
   return (
